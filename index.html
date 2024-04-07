@@ -1,62 +1,70 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="assets/style.css">
     <title>MyKalkulator</title>
-    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-    <h1 id="sambutan">Kalkulator Sederhana</h1>
-    <div class="flex-container-column card">
-        <div class="display">
-            <h1 id="displayNumber">0</h1>
+    <div class="relative bg-gradient-to-r from-cyan-500 to-blue-500 bg-opacity-50 backdrop-blur-xl  w-full h-full">
+        <img src="assets/Frame 7.png" alt="frame" class="absolute hidden sm:block">
+        <div class="h-full flex justify-center items-center gap-10 max-w-7xl mx-auto my-auto">
+            <div class="w-1/2">
+                <div class="rounded-xl">
+                    <div class="flex-container-column card relative bg-gray-200 bg-opacity-30 backdrop-blur-xl">
+                        <div class="display h-14 relative">
+                            <h1 id="displayNumber" class="absolute inset-0 flex items-center justify-center text-4xl">0
+                            </h1>
+                        </div>
+                        <div class="flex-container-row">
+                            <div class="button">7</div>
+                            <div class="button">8</div>
+                            <div class="button">9</div>
+                            <div class="button negative">+/-</div>
+                        </div>
+                        <div class="flex-container-row">
+                            <div class="button">4</div>
+                            <div class="button">5</div>
+                            <div class="button">6</div>
+                            <div class="button operator">-</div>
+                        </div>
+                        <div class="flex-container-row">
+                            <div class="button">1</div>
+                            <div class="button">2</div>
+                            <div class="button">3</div>
+                            <div class="button operator">+</div>
+                        </div>
+                        <div class="flex-container-row">
+                            <div class="button clear">CE</div>
+                            <div class="button">0</div>
+                            <div class="button equals double">=</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="w-1/2 flex items-center justify-center mx-auto max-w-7xl overflow-hidden flex-container-column card">
+                <h1 class="text-white font-serif text-4xl py-10">My Calculator</h1>
+                <table class="overflow-hidden relative bg-gray-200 bg-opacity-30 backdrop-blur-xl rounded-xl">
+                    <thead class="overflow-hidden">
+                        <tr class="text-sm bg-[#303136]">
+                            <th>First Number</th>
+                            <th>Operator</th>
+                            <th>Second Number</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyList" class="overflow-hidden text-white"></tbody>
+                </table>
+            </div>
         </div>
-        <div class="flex-container-row">
-            <div class="button">7</div>
-            <div class="button">8</div>
-            <div class="button">9</div>
-            <div class="button negative">+/-</div>
-        </div>
-        <div class="flex-container-row">
-            <div class="button">4</div>
-            <div class="button">5</div>
-            <div class="button">6</div>
-            <div class="button operator">-</div>
-        </div>
-        <div class="flex-container-row">
-            <div class="button">1</div>
-            <div class="button">2</div>
-            <div class="button">3</div>
-            <div class="button operator">+</div>
-        </div>
-        <div class="flex-container-row">
-            <div class="button clear">CE</div>
-            <div class="button">0</div>
-            <div class="button equals double">=</div>
-        </div>
-    </div>
-    <div class="history card">
-        <h2 style="text-align: center"> Riwayat Perhitungan</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Angka Pertama</th>
-                    <th>Operator</th>
-                    <th>Angka Kedua</th>
-                    <th>Hasil</th>
-                </tr>
-            </thead>
-            <tbody id="historyList"></tbody>
-        </table>
-    </div>
 
-    <script src="assets/storage.js"></script>
-    <script src="assets/kalkulator.js"></script>
-    
-    <footer>
-        <p>Affan Maulana with Love &#169; 2022</p>
-    </footer>
+        <script src="assets/storage.js"></script>
+        <script src="assets/kalkulator.js"></script>
+    </div>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
-
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
 .flex-container-column {
     display: flex;
     flex-direction: column;
-
+    gap: 10px;
     /* properti pendukung */
     max-width: 800px;
     margin: 0 auto;
@@ -19,24 +20,12 @@ body {
 
 .flex-container-row {
     display: flex;
-}
-
-#sambutan {
-    text-align: center;
-    color: black;
-    box-shadow: 10px 10px 8px 0 rgb(236, 243, 133);
-    border-radius: 5px;
-    padding: 30px;
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: 1px solid #ddd;
-    width: 80%;
-    margin: 30px auto 0 auto;
+    gap: 10;
+    gap: 10px;
 }
 
 footer {
     text-align: center;
-    box-shadow: 10px 10px 8px 0 rgb(236, 243, 133);
     border-radius: 5px;
     padding: 5px;
     border-collapse: collapse;
@@ -48,13 +37,14 @@ footer {
 
 .button {
     flex-basis: 25%;
-
+    border-radius: 5%;
+    color: #98d6ff;
     /* properti pendukung lainnya */
     font-size: 1.5em;
     text-align: center;
-    padding: 40px;
+    padding: 30px;
     border: 1px solid black;
-    background: -webkit-linear-gradient(top, #d2d2d2, #ddd);
+    background: #303136;
     cursor: pointer;
 }
 
@@ -63,60 +53,36 @@ footer {
 }
 
 .display {
-    color: black;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: yellow;
-    border: 1px solid black;
-    font-size: 2em;
+    border-radius: 5%;
 }
 
 .operator,
 .negative,
 .equals {
-    background: rgb(40, 67, 47);
-    color: yellow;
+    background: #303136;
+    color: #ffffff;
 }
 
 .card {
-    box-shadow: 10px 10px 8px 0 rgb(229, 255, 0);
     border-radius: 5px;
     padding: 30px;
-    margin-top: 20px;
 }
 
 .button:hover {
     font-weight: bold;
 }
 
-.history {
-    width: 80%;
-    margin: 30px auto 0 auto;
-    overflow: scroll;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
-}
-
-th, td {
+th,
+td {
     text-align: center;
     padding: 16px;
 }
 
 th {
-    background-color: rgb(40, 67, 47);
-    color: white;
+    color: #98d6ff;
 }
 
-tr:nth-child(even) {
-    background-color: #d2d2d2;
-}
-
-@media screen and (max-width: 513px){
+@media screen and (max-width: 513px) {
     .button {
         padding: 10px;
     }
